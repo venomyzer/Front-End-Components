@@ -262,6 +262,7 @@ textarea::-webkit-scrollbar {
 }
 .t-flex {
     display: flex;
+    gap: 20px;
 }
 .temperature-convertor div {
      position: relative;
