@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f6fbff;
+}
+.heading {
+    font-size: 64px;
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    margin: 100px;
+}
+.comingsoon {
+    margin-top: 100px;
+}
+.hidden {
+    display: none !important;
+}
+
+/*1. Caclulator*/
+
+.calculator-title {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.calculator-title span{
+    font-style: initial;
+    font-weight: 700;
+}
+.calculator {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    padding: 10px 20px 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.calculator-display {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: right;
+    border: none;
+    outline: none;
+    pointer-events: none;
+}
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background-color: rgba(232,232,232,0.05);
+}
+.calculator-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #f6f6f6;
+
+}
+.calculator-buttons button:active {
+    transform: scale(0.95);
+}
+.operator {
+    color: #0086ff;
+}
+.non-operator {
+    color: black;
+}
+
+
+
+/*2.TO-DO List*/
+
+.to-do-title {
+    margin-bottom: 10px;
+}
+.to-do {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.to-do-input {
+    position: relative;
+    height: 64px;
+    width: 100%;
+}
+.to-do-input textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 18px 45px 18px 18px;
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+.to-do-input textarea:focus{
+    border-color: #0086ff;
+}
+.to-do-input .uil-edit {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #8a8a8a;
+    pointer-events: none;
+}
+.to-do-input textarea:focus ~ .uil-edit {
+    color: #0086ff;
+}
+
+.to-do-list {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+.to-do-list::-webkit-scrollbar {
+    width: 6px;                 /* slim width */
+}
+.to-do-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.to-do-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.to-do-list-item {
+    position: relative;
+    margin-bottom: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 6px;
+    background-color: #f6f6f6;
+}
+.to-do-list-item input {
+    height: 16px;
+    width: 16px;
+    accent-color: #0086ff;
+}
+.to-do-task {
+    margin: 0 30px 0 10px;
+    word-break: break-all;
+    transition: ease 0.3s;
+}
+.to-do-list-item input:checked ~ .to-do-task {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #135a00;
+}
+.to-do-list-item .uil-trash {
+    position: absolute;
+    left: 93%;
+    color: #8a8a8a;
+    opacity: 0;
+    transform: scale(1);
+    transition: ease 0.1s;
+}
+.to-do-list-item:hover .uil-trash {
+    opacity: 0.6;
+}
+.to-do-list-item .uil-trash:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.to-do-pending {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.to-do-add {
+    opacity: 0;
+    margin-left: 40px;
+    position: relative;
+    padding: 4px 12px;
+    border: 1px solid #0086ff;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: ease 0.1s;
+}
+.to-do-add.visible {
+    opacity: 1;
+    margin-left: 40px;
+    position: relative;
+    padding: 4px 12px;
+    border: 1px solid #0086ff;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: ease 0.2s;
+}
+.to-do-add:hover {
+    background-color: #0086ff;
+    color: #ffffff;
+}
+.to-do-clear {
+    position: relative;
+    padding: 4px 12px;
+    border: 1px solid #ff5555;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: ease 0.2s;
+}
+.to-do-clear:hover {
+    background-color: #ff5555;
+    color: #ffffff;
+}
+
+
+/*3.Temperature Convertor*/
+
+.temperature-title {
+    margin-bottom: 10px;
+}
+.temperature-convertor {
+    display: block;
+    padding: 25px 25px;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    background: #ffffff;
+    margin-bottom: 100px;
+}
+.t-flex {
+    display: flex;
+}
+.temperature-convertor div {
+     position: relative;
+}
+.temperature-convertor h3 {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.temperature-convertor input {
+    height: 60px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    box-shadow: inset 2px 4px 15px 0 rgba(0,0,0,0.1);
+    border-radius: 12px;
+    font-size: 28px;
+}
+.degree {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+    transform: scale(1.2);
+}
+.t-ref {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+
+/*4. Star Rating*/
+
+.star-rating-title {
+    margin-bottom: 10px;
+}
+.star-rating {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 25px 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.star-rating h2 {
+    color: #DADADAFF;
+    font-weight: 500;
+}
+.star {
+    display: flex;
+    gap: 30px;
+}
+.uis-star {
+    font-size: 40px;
+    color: #DADADAFF;
+    transition: color 0.3s ease;
+}
+.active {
+    color: #ffc901;
+}

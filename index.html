@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front End Components</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+</head>
+<body>
+
+    <h1 class="heading">Front End Components</h1>
+
+
+<!--    CALCULATOR-->
+
+    <h1 class="calculator-title">Simple <span>Calculator</span></h1>
+    <div class="calculator">
+        <input type="text" class="calculator-display" />
+        <div class="calculator-buttons">
+            <button class="operator" data-value="AC">AC</button>
+            <button class="operator" data-value="DEL">DEL</button>
+            <button class="operator" data-value="%">%</button>
+            <button class="operator" data-value="/">/</button>
+
+            <button class="non-operator" data-value="7">7</button>
+            <button class="non-operator" data-value="8">8</button>
+            <button class="non-operator" data-value="9">9</button>
+            <button class="operator" data-value="*">*</button>
+
+            <button class="non-operator" data-value="4">4</button>
+            <button class="non-operator" data-value="5">5</button>
+            <button class="non-operator" data-value="6">6</button>
+            <button class="operator" data-value="-">-</button>
+
+            <button class="non-operator" data-value="1">1</button>
+            <button class="non-operator" data-value="2">2</button>
+            <button class="non-operator" data-value="3">3</button>
+            <button class="operator" data-value="+">+</button>
+
+            <button class="non-operator" data-value="0">0</button>
+            <button class="non-operator" data-value="00">00</button>
+            <button class="non-operator" data-value=".">.</button>
+            <button class="operator" data-value="=">=</button>
+        </div>
+    </div>
+
+
+
+<!--    TO-DO List-->
+
+    <h1 class="to-do-title">TO-DO List</h1>
+
+    <div class="to-do">
+        <div class="to-do-input">
+            <textarea placeholder="Enter new task."></textarea>
+            <i class="uil uil-edit"></i>
+        </div>
+        <ul class="to-do-list">
+<!--            <li class="to-do-list-item" onclick="handleTodoCheckboxStatus(this)">-->
+<!--                <input type="checkbox" />-->
+<!--                <span class="to-do-task">${todoInputValue}</span>-->
+<!--                <i class="uil uil-trash"></i>-->
+<!--            </li>-->
+        </ul>
+        <div class="to-do-pending">
+            <span>You have <span class="to-do-pending-num">no</span> tasks pending.</span>
+            <button class="to-do-add">Add Task</button>
+            <button class="to-do-clear">Clear All</button>
+        </div>
+    </div>
+
+<!--    Temperature Convertor-->
+
+    <h1 class="temperature-title">Temperature Convertor</h1>
+
+    <div class="temperature-convertor">
+        <div class="t-flex">
+            <div class="t-celsius">
+                <h3>Celsius</h3>
+                <input id="t-celsius" type="number">
+                <h3 class="degree">°C</h3>
+            </div>
+            <div class="t-fahrenheit">
+                <h3>Fahrenheit</h3>
+                <input id="t-fahrenheit" type="number">
+                <h3 class="degree">°F</h3>
+            </div>
+            <div class="t-kelvin">
+                <h3>Kelvin</h3>
+                <input id="t-kelvin" type="number">
+                <h3 class="degree">K</h3>
+            </div>
+        </div>
+        <h3 class="t-ref">*All conversions are based on International Standard Units</h3>
+    </div>
+
+
+<!--    Star Rating-->
+
+    <h1 class="star-rating-title">Rating</h1>
+
+    <div class="star-rating">
+        <h2 id=>How was the experience?</h2>
+        <div class="star">
+            <i class="uis uis-star"></i>
+            <i class="uis uis-star"></i>
+            <i class="uis uis-star"></i>
+            <i class="uis uis-star"></i>
+            <i class="uis uis-star"></i>
+        </div>
+    </div>
+
+    <h1 class="comingsoon">More Coming Soon...</h1>
+
+    <script src="script.js"></script>
+</body>
+</html>
